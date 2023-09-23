@@ -30,6 +30,9 @@ function App() {
         <Route path="/comments" exact>
           <Comments />
         </Route>
+        <Route path="/review" exact>
+          <Review />
+        </Route>
       </div>
     </Router>
   );

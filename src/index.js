@@ -27,11 +27,19 @@ const supportData = (state = [], action) => {
     return state;
 }
 
+const commentData = (state = [], action) => {
+    if (action.type === 'STORE_COMMENT') {
+        return action.payload
+    }
+    return state;
+}
+
 const reduxStore = createStore(
     combineReducers({
         feelingData,
         understandingData,
-        supportData
+        supportData,
+        commentData
     }),
     applyMiddleware(logger)
 );
