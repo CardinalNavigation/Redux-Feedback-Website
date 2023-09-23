@@ -6,8 +6,22 @@ import { applyMiddleware, combineReducers, createStore } from 'redux';
 import logger from 'redux-logger';
 import { Provider } from 'react-redux';
 
-const feedbackData = (state = [], action) => {
-    if (action.type === 'FEEDBACK_TOSS') {
+const feelingData = (state = [], action) => {
+    if (action.type === 'STORE_FEELING') {
+        return action.payload
+    }
+    return state;
+}
+
+const understandingData = (state = [], action) => {
+    if (action.type === 'STORE_UNDERSTANDING') {
+        return action.payload
+    }
+    return state;
+}
+
+const supportData = (state = [], action) => {
+    if (action.type === 'STORE_SUPPORT') {
         return action.payload
     }
     return state;
@@ -15,7 +29,9 @@ const feedbackData = (state = [], action) => {
 
 const reduxStore = createStore(
     combineReducers({
-        feedbackData,
+        feelingData,
+        understandingData,
+        supportData
     }),
     applyMiddleware(logger)
 );

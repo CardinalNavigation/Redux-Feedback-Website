@@ -16,7 +16,7 @@ function Understanding() {
         }
 
         dispatch({
-            type: 'FEEDBACK_TOSS',
+            type: 'STORE_UNDERSTANDING',
             payload: understandingReducerInput
         });
 

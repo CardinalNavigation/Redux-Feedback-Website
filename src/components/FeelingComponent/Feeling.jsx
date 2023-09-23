@@ -16,7 +16,7 @@ function Feeling() {
         }
 
         dispatch({
-            type: 'FEEDBACK_TOSS',
+            type: 'STORE_FEELING',
             payload: feelingReducerInput
         });
 
