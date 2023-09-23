@@ -18,7 +18,7 @@ function App() {
         <Route path="/">
           <Header />
         </Route>
-        <Route path="/" exact>
+        <Route path="/feeling" exact>
           <Feeling />
         </Route>
         <Route path="/understanding" exact>

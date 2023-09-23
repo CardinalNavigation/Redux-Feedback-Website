@@ -17,6 +17,10 @@ const understandingData = (state = [], action) => {
     if (action.type === 'STORE_UNDERSTANDING') {
         return action.payload
     }
+    if (action.type === 'DATA_RESET') {
+        return action.payload
+    }
+
     return state;
 }
 
