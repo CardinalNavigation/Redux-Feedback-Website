@@ -39,11 +39,6 @@ function Review() {
                 console.log('POST /feedback fail', err);
             })
 
-        dispatch({
-            type: 'DATA_RESET',
-        });
-
-
         history.push('/thankyou')
     };
 
