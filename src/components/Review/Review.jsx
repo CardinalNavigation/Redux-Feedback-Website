@@ -44,7 +44,7 @@ function Review() {
         });
 
 
-        history.push('/feeling')
+        history.push('/thankyou')
     };
 
     return (
