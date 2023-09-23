@@ -1,8 +1,8 @@
 import App from "../App/App";
-import { useSelector } from 'react-redux';
 import axios from "axios";
+import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from "react-router-dom";
-import { useDispatch } from "react-redux";
+
 
 
 // Reivew is Going to Take In all of our Reducer Data
@@ -19,14 +19,14 @@ function Review() {
 
     const handleClick = () => {
         console.log("Button Clicked")
-        let date= new Date()
-        let dateToString= date.toISOString()
+        let date = new Date()
+        let dateToString = date.toISOString()
         let databasePackage = {
             feeling: Number(feeling.feelingNumber),
             understanding: Number(understanding.understandingNumber),
             support: Number(support.supportNumber),
             comments: comment.commentText,
-            flagged:"false",
+            flagged: "false",
             date: dateToString
         }
         console.log(databasePackage)
@@ -39,10 +39,10 @@ function Review() {
                 console.log('POST /feedback fail', err);
             })
 
-            dispatch({
-                type: 'DATA_RESET',
-            });
-    
+        dispatch({
+            type: 'DATA_RESET',
+        });
+
 
         history.push('/feeling')
     };
