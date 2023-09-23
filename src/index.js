@@ -7,7 +7,7 @@ import logger from 'redux-logger';
 import { Provider } from 'react-redux';
 
 const feedbackData = (state = [], action) => {
-    if (action.type === 'FEEDBACK_PASS_ALONG') {
+    if (action.type === 'FEEDBACK_TOSS') {
         return action.payload
     }
 
