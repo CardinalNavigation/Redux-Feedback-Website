@@ -14,7 +14,7 @@ function Feeling() {
         let feelingReducerInput = {
             feelingNumber: feelingNumber
         }
-        
+
         dispatch({
             type: 'FEEDBACK_TOSS',
             payload: feelingReducerInput
@@ -29,12 +29,7 @@ function Feeling() {
                 <h2>How Are you Feeling today?</h2>
                 <p>Feeling?</p>
                 <form onSubmit={handleSubmit}>
-                    <input
-                        required
-                        value={feelingNumber}
-                        placeholder="1-10"
-                        type="number"
-                        onChange={(event) => setFeelingNumber(event.target.value)}>
+                    <input required value={feelingNumber} placeholder="1-10" type="number" onChange={(event) => setFeelingNumber(event.target.value)}>
                     </input>
                     <button type='submit'>Next</button>
                 </form>

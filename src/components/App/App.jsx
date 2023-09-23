@@ -7,17 +7,21 @@ import Review from '../Review/Review';
 import Support from '../Support/Support';
 import Understanding from '../Understanding/Understanding';
 
+import { HashRouter as Router, Route } from "react-router-dom";
+
 function App() {
 
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <h1 className='App-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
-      </header>
-      <Feeling/>
-      <Comments/>
-    </div>
+    <Router>
+      <div className='App'>
+        <header className='App-header'>
+          <h1 className='App-title'>Feedback!</h1>
+          <h4>Don't forget it!</h4>
+        </header>
+        <Feeling />
+        <Comments />
+      </div>
+    </Router>
   );
 }
 
