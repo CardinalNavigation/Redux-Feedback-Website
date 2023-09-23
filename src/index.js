@@ -6,7 +6,7 @@ import { applyMiddleware, combineReducers, createStore } from 'redux';
 import logger from 'redux-logger';
 import { Provider } from 'react-redux';
 
-const feedbackData = (state = 0, action) => {
+const feedbackData = (state = [], action) => {
     if (action.type === 'FEEDBACK_TOSS') {
         return action.payload
     }

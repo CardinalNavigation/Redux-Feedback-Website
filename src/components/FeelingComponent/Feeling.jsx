@@ -21,7 +21,7 @@ function Feeling() {
         });
 
         setFeelingNumber('')
-        history.push('/Understanding')
+        history.push('/understanding')
     }
 
     return (
