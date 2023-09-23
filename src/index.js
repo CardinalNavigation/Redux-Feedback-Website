@@ -10,6 +10,9 @@ const feelingData = (state = [], action) => {
     if (action.type === 'STORE_FEELING') {
         return action.payload
     }
+    if (action.type === 'DATA_RESET') {
+        return []
+    }
     return state;
 }
 
@@ -18,7 +21,7 @@ const understandingData = (state = [], action) => {
         return action.payload
     }
     if (action.type === 'DATA_RESET') {
-        return action.payload
+        return []
     }
 
     return state;
@@ -28,12 +31,18 @@ const supportData = (state = [], action) => {
     if (action.type === 'STORE_SUPPORT') {
         return action.payload
     }
+    if (action.type === 'DATA_RESET') {
+        return []
+    }
     return state;
 }
 
 const commentData = (state = [], action) => {
     if (action.type === 'STORE_COMMENT') {
         return action.payload
+    }
+    if (action.type === 'DATA_RESET') {
+        return []
     }
     return state;
 }
