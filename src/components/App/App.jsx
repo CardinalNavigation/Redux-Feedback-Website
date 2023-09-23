@@ -1,6 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
+import Feeling from '../FeelingComponent/Feeling'
+import Comments from '../Comments/Comments';
+import Review from '../Review/Review';
+import Support from '../Support/Support';
+import Understanding from '../Understanding/Understanding';
 
 function App() {
 
