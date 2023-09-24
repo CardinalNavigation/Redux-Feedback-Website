@@ -24,6 +24,10 @@ function Understanding() {
         history.push('/support')
     }
 
+     const handleClick=()=>{
+        history.push('/feeling')
+     }
+
     return (
         <>
             <div>
@@ -34,6 +38,7 @@ function Understanding() {
                     </input>
                     <button type='submit'>Next</button>
                 </form>
+                <button onClick={handleClick}>Back</button>
             </div>
         </>
     )

@@ -24,6 +24,10 @@ function Support() {
         history.push('/comments')
     }
 
+    const handleClick = () => {
+        history.push('/understanding')
+    }
+
     return (
         <>
             <div>
@@ -34,6 +38,7 @@ function Support() {
                     </input>
                     <button type='submit'>Next</button>
                 </form>
+                <button onClick={handleClick}>Back</button>
             </div>
         </>
     )

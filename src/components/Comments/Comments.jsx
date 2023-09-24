@@ -24,6 +24,10 @@ function Comments() {
         history.push('/review')
     }
 
+    const handleClick = () => {
+        history.push('/support')
+    }
+
     return (
         <>
             <div>
@@ -34,6 +38,7 @@ function Comments() {
                     </input>
                     <button type='submit'>Next</button>
                 </form>
+                <button onClick={handleClick}>Back</button>
             </div>
         </>
     )
