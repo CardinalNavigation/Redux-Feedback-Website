@@ -18,7 +18,7 @@ function Header() {
                     className='App-title'>
                     Course Feedback
                 </Typography>
-                <Typography variant="h4">Don't forget it!</Typography>
+                {/* <Typography variant="h4">Don't forget it!</Typography> */}
             </Box>
             {/* <div>
                 <form onSubmit={nextPage}>
