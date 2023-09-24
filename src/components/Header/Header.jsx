@@ -1,5 +1,6 @@
 import App from "../App/App";
 import { useHistory } from "react-router-dom";
+import { Typography, Box } from "@mui/material";
 
 function Header() {
 
@@ -11,10 +12,14 @@ function Header() {
 
     return (
         <>
-            <header className='App-header'>
-                <h1 className='App-title'>Feedback!</h1>
-                <h4>Don't forget it!</h4>
-            </header>
+            <Box sx={{ bgcolor: "primary.main" }} className='App-header'>
+                <Typography
+                    variant="h1"
+                    className='App-title'>
+                    Course Feedback
+                </Typography>
+                <Typography variant="h4">Don't forget it!</Typography>
+            </Box>
             {/* <div>
                 <form onSubmit={nextPage}>
                     <button type='submit'>Submit Your Feedback!</button>

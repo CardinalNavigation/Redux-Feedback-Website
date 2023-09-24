@@ -2,6 +2,8 @@ import App from "../App/App";
 import { useDispatch } from "react-redux";
 import { useHistory } from 'react-router-dom';
 import { useState } from "react";
+import { Container, Typography, Button, TextField, FormControl } from '@mui/material';
+
 
 function Feeling() {
 
@@ -26,15 +28,39 @@ function Feeling() {
 
     return (
         <>
-            <div>
-                <h2>How Are you Feeling today?</h2>
-                <p>Feeling?</p>
+            <Container>
+                <Typography
+                    variant='h3'
+                    color='primary'
+                    gutterBottom>
+                    How Are you Feeling today?
+                </Typography>
+                {/* <Typography
+                    variant='h4'
+                    color="textSecondary"
+                    gutterBottom>
+                    Feeling?
+                </Typography> */}
                 <form onSubmit={handleSubmit}>
-                    <input required value={feelingNumber} placeholder="1-10" type="number" onChange={(event) => setFeelingNumber(event.target.value)}>
-                    </input>
-                    <button type='submit'>Next</button>
+                    <FormControl sx={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'center',
+                        alignItems: 'baseline',
+                        py: 5,
+                    }} >
+                        <TextField
+                            id="standard-basic"
+                            label="1-10"
+                            variant="standard" required
+                            value={feelingNumber}
+                            type="number"
+                            size="medium"
+                            onChange={(event) => setFeelingNumber(event.target.value)} />
+                        <Button variant="contained" type='submit'>Next</Button>
+                    </FormControl>
                 </form>
-            </div>
+            </Container >
         </>
     )
 }
