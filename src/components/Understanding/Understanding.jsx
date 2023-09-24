@@ -25,7 +25,7 @@ function Understanding() {
     }
 
      const handleClick=()=>{
-        history.push('/feeling')
+        history.push('/')
      }
 
     return (

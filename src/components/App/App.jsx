@@ -19,7 +19,7 @@ function App() {
         <Route path="/">
           <Header />
         </Route>
-        <Route path="/feeling" exact>
+        <Route path="/" exact>
           <Feeling />
         </Route>
         <Route path="/understanding" exact>

@@ -11,7 +11,7 @@ function ThankYouPage() {
         dispatch({
             type: 'DATA_RESET',
         });
-        history.push('/feeling')
+        history.push('/')
 
     }
 
